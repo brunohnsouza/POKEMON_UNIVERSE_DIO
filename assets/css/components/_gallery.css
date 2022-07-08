@@ -1,0 +1,29 @@
+/* =======
+   GALLERY
+   ======= */
+
+.gallery {
+    padding: 20px;
+    padding-left: 0;
+  }
+  
+  .gallery ul{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .gallery ul li{
+    margin-left: 50px;
+  }
+  
+  .gallery ul li:first-child{
+    margin-left: 0px;
+  }
+  
+  .gallery ul li a img{
+    border:solid 5px white;
+    border-radius: 10px;
+  }
+  .gallery ul li a img:hover {
+    opacity: 0.7;
+  }

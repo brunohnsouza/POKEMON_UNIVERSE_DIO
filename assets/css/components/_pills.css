@@ -1,0 +1,21 @@
+/* ===============
+   PILLS SETTINGS
+   =============== */
+
+.pills ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.pills ul li {
+    font-size: 12px;
+    color: white;
+    padding: 5px 15px;
+    margin: 0 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.pills ul li:first-child {
+    margin-left: 0;
+}

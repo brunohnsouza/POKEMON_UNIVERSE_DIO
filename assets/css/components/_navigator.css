@@ -1,0 +1,71 @@
+/*  ========================
+    NAVIGATOR OF 'LEFT AREA'
+    ========================  */
+
+.navigator {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.navigator ul li {
+    margin: 3.75rem 0;
+}
+
+.navigator ul li:first-child {
+    margin-top: 0;
+}
+
+.navigator ul li:last-child {
+    margin-bottom: 0;
+}
+
+.navigator ul li a {
+    color: white;
+    border: solid 2px white;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: background 0.6s ease-in-out;
+}
+
+.navigator::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+    z-index: 0;
+}
+
+.navigator ul {
+    z-index: 1;
+}
+
+.navigator ul li a:hover,
+.navigator ul li a.active {
+    color: var(--primary-color);
+    background-color: white;
+    
+    transform: scale(1.1);
+}
+
+.navigator .navigator__icon {
+    position: absolute;
+    top: -10px;
+}
+
+.navigator .navigator__icon > a > img {
+    width: 3rem;
+}
