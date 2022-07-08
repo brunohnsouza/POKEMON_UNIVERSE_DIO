@@ -1,0 +1,249 @@
+/* ==================
+   MAIN PAGE SETTINGS
+   ================== */
+
+@import url('/assets/css/reset.css');
+@import url('/assets/css/global.css');
+@import url('/assets/css/components/_loading-page.css');
+@import url('/assets/css/responsive.css');
+
+/* BODY BACKGROUND
+HOME PAGE */
+body {
+    background-color: var(--primary-color);
+}
+
+/* PSEUDO-ELEMENT FOR BODY SETTINGS */
+body::before {
+    content: "";
+    background-image: url('/assets/imgs/wallpaper-pokemon.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.2;
+
+    transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* TOP MENU CONFIGURATION */
+.p-menu {
+    padding: 1rem 0;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+/* CONFIGURATION OF MENU ITEMS */
+.p-menu__item {
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 1.25rem;
+
+    transition: transform 0.3s ease-in-out;
+}
+.p-menu__item:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+.p-menu__item > a {
+    font-size: 14px;
+}
+
+/* UPPER CENTRAL ICON SETTING */
+.p-menu__icon > img {
+    width: 2.5rem;
+    margin: 0 1.25rem;
+    vertical-align: middle;
+}
+/* ========================================================= */
+
+/* =================
+   CENTRAL MAIN AREA
+   ================= */
+
+/* CONFIGURATION OF THE GENERAL CONTAINER OF THE MAIN CENTRAL */
+.p-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    perspective: 3000px;
+}
+
+/* GENERAL CONFIGURATION OF CARDS */ 
+.p-card {
+    border: 0.5rem solid white;
+    width: 100%;
+    height: 70vh;
+    position: absolute;
+
+    transition: filter .5s ease-in-out;
+}
+
+/* CARD ROTATION CONFIGURATION */
+.p-card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(50vw);
+}
+
+.p-card:nth-child(2) {
+    transform: rotateY(120deg) translateZ(50vw);
+}
+
+.p-card:nth-child(3) {
+    transform: rotateY(240deg) translateZ(50vw);
+}
+
+/* CARDS BACKGROUND CONFIGURATION */
+.p-card__background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 1;
+
+    transition: opacity 1s ease-in-out;
+}
+
+/* CONFIGURATION OF POKEMON IMAGES ON CARDS */
+.p-card__image {
+    padding: 6%;
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    position: relative;
+
+    transition: 1s ease-in-out;
+}
+
+/* CONFIGURATION OF POKEMON NAMES */
+.p-card__title {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+
+    transition: bottom 1s ease-in-out;
+}
+/* ========================================================= */
+
+/* =============
+   LOWER BUTTONS
+   ============= */
+
+/* GENERAL CONFIGURATION OF THE BUTTON AREA */
+.p-controller {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    bottom: 1.5rem;
+    width: 100%;
+}
+
+/* BUTTON CONFIGURATION */
+.p-controller__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    font-size: 14px;
+
+    transition: transform 0.3s ease-in-out;
+}
+.p-controller__button:hover {
+    transform: scale(1.1);
+}
+
+/* SPECIFIC CONFIGURATION FOR THE SECOND
+BUTTON */
+.p-controller__button:nth-child(2) {
+    margin: 0 3.75rem;
+}
+
+/* ACTIVE BUTTON EFFECT */
+.p-controller__button--active {
+    background-color: white;
+    color: var(--primary-color);
+    border: 3px solid var(--primary-color);
+    outline: 0.125rem solid white;
+}
+
+/* LINE OF BUTTONS */
+.p-controller__line {
+    background-color: white;
+    width: 50%;
+    height: 2px;
+    position: absolute;
+}
+/* ========================================================= */
+
+/* ===============
+   HOVER ANIMATION
+   =============== */
+
+/* WHEN THE CLASS BELOW IS TRIGGERED,
+THE BACKGROUND OF THE CARDS WILL BE CALLED */
+.p-card--hovered .p-card__background {
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* WHEN THE CLASS BELOW IS TRIGGERED,
+THE PICTURE OF CARDS WILL BE CALLED */
+.p-card--hovered .p-card__image {
+    transform: scale(1.2);
+    filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
+}
+
+/* IN THE BODY, AN ELEMENT WITH THIS ID AND
+INSIDE THE BEFORE AN IMAGE WILL BE ADDED*/
+body#pokemon-01-hovered::before {
+    background-image: url('/assets/imgs/pic.pk-bg-01.jpg');
+}
+body#pokemon-02-hovered::before {
+    background-image: url('/assets/imgs/pic.pk-bg-02.jpg');
+}
+body#pokemon-03-hovered::before {
+    background-image: url('/assets/imgs/pic-pk-bg-03.png');
+}
+
+/* WHEN THE ID STARTS WITH "pokemon-", THE BEFORE WILL BE
+ACTIVATED */ 
+body[id^="pokemon-"]::before {
+    opacity: 1;
+}
+
+/* WHEN THE ID BEGINS WITH "pokemon-" AND DOESN'T HAVE THE CLASS
+BELOW, THE OTHER IMAGES WILL BE 'BLACK AND WHITE' */
+body[id^="pokemon-"] .p-card:not(.p-card--hovered) {
+    filter: grayscale(100%);
+}
+
+/* COM ESSA CLASSE ATIVADA, O NOME DOS POKÉMONS
+IRÃO PARA O MEIO */
+.p-card--hovered .p-card__title {
+    bottom: 50%;
+}
+
+/* AREA WHERE CARDS ARE INCLUDED */
+.p-cards-carousel {
+    display: flex;
+    justify-content: center;
+    width: calc(100vw / 3 - 10%);
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease-in;
+}
