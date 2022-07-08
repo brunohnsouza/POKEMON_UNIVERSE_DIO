@@ -1,0 +1,180 @@
+/* =====================
+   GENERAL CONFIGURATION
+   FROM ALL PAGES
+   INTERNAL
+   ===================== */
+
+@import url('reset.css');
+@import url('global.css');
+@import url('components/_navigator.css');
+@import url('components/_pills.css');
+@import url('components/_link-button.css');
+@import url('components/_gallery.css');
+@import url('components/_loading-page.css');
+@import url('http://fonts.cdnfonts.com/css/pokemon-solid');
+
+/* GENERAL 'DIV' CONFIGURATION */
+.p-wrapper {
+    display: flex;
+    height: 100vh;
+    flex-flow: row nowrap;
+}
+
+/* LEFT SIDE AREA CONFIGURATION */
+.p-wrapper .p-left-column {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding-right: 50px;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+/* CONFIGURATION OF THE CENTRAL AREA */
+.p-wrapper .p-main-content {
+    height: 100%;
+    width: 100%;
+    background-color: grey;
+    padding-left: 130px;   
+}
+
+/* UPPER MAIN AREA CONFIGURATION */
+.p-wrapper .p-main-content__top {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* CONFIGURATION OF THE LOWER MAIN AREA */
+.p-wrapper .p-main-content__bottom {
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/* POKEMON DESCRIPTION SETTING */
+.p-wrapper .p-main-content__top .p-description {
+    background-color: rgba(0, 0, 0, .7);
+    max-width: 80%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* INTERNAL DISTANCE OF 'PILLS' */
+.p-wrapper .p-main-content__top .p-description .pills {
+    margin-bottom: 20px;
+}
+
+/* DESCRIPTION TEXT CONFIGURATION */
+.p-wrapper .p-main-content__top .p-description .p-description__text p {
+    font-size: 14px;
+    color: white;
+    line-height: 170%;
+}
+
+/* SETTING THE 'FIND OUT MORE' AREA */
+.p-wrapper .p-main-content .p-links {
+    padding: 20px;
+    padding-left: 0;
+}
+
+/* LINK LIST CONFIGURATION */
+.p-wrapper .p-main-content .p-links ul {
+    display: flex;
+    flex-direction: row;
+}
+/* ========================================================= */
+
+/* ============================
+   PAGE 1, 2 AND 3 OF BULBASAUR
+   ============================ */
+
+/* TITLE */
+.p-wrapper .p-main-content .p-title__bulbasaur h1 {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 80px;
+    color: #80CEB4;
+    max-width: 50%;
+    margin-top: 20px;
+    margin-left: 0;
+    cursor: default;
+    filter: drop-shadow(10px 5px 4px rgba(0, 0, 0, .5));
+}
+
+/* COLOR OF PILLS */
+.color-pills__bulbasaur {
+    background-color: #2D7070;
+}
+
+/* PAGE BACKGROUND */
+.p-bulbassauro-bg-01 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/pic.pk-bg-01.jpg);
+    background-size: cover;
+}
+/* ========================================================= */
+
+/* =============================
+   PAGE 1, 2 AND 3 OF CHARMANDER
+   ============================= */
+
+/* TITLE */
+.p-wrapper .p-main-content .p-title__charmander h1 {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 80px;
+    color: #eaa876;
+    max-width: 50%;
+    margin-top: 20px;
+    margin-left: 0;
+    cursor: default;
+    filter: drop-shadow(10px 5px 4px rgba(0, 0, 0, .5));
+}
+   
+/* COLOR OF PILLS */
+.color-pills__charmander {
+    background-color: #db6f17;
+}
+
+/* PAGE BACKGROUND */
+.p-charmander-bg-01 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/pic.pk-bg-02.jpg);
+    background-size: cover;
+}
+/* ========================================================= */
+
+/* ===========================
+   PAGE 1, 2 AND 3 OF SQUIRTLE
+   =========================== */
+
+/* TITLE */
+.p-wrapper .p-main-content .p-title__squirtle h1 {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 80px;
+    color: #8FC4D0;
+    max-width: 50%;
+    margin-top: 20px;
+    margin-left: 0;
+    cursor: default;
+    filter: drop-shadow(10px 5px 4px rgba(0, 0, 0, .5));
+}
+
+/* COLOR OF PILLS */
+.color-pills__squirtle {
+    background-color: #3e7d90;
+}
+
+/* PAGE BACKGROUND */
+.p-squirtle-bg-01 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../imgs/pic-pk-bg-03.png);
+    background-size: cover;
+}
+
+
+
