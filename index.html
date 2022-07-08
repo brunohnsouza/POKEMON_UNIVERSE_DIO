@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/assets/css/home-page-styles.css">
+    
+    <link rel="icon" href="/assets/imgs/pokeball-icon.png">
+    <title>POKÉMON | Escolha!</title>
+</head>
+<body>
+
+    <!-- LOADING-PAGE -->
+    <div class="p-loading">
+        <div id="load"></div>
+    </div>
+
+    <!-- TOP MENU -->
+    <nav class="p-menu">
+        <ul>
+            <li class="p-menu__item">
+                <a href="/">Página Inicial</a>
+            </li>
+            <li class="p-menu__item">
+                <a href="/pages/bulbassauro/bulbassauro1.html">Bulbasaur</a>
+            </li>
+            <li class="p-menu__item p-menu__icon">
+                <img src="assets/imgs/pokeball-icon.png" alt="pokeball">
+            </li>
+            <li class="p-menu__item">
+                <a href="/pages/charmander/charmander1.html">Charmander</a>
+            </li>
+            <li class="p-menu__item">
+                <a href="/pages/squirtle/squirtle1.html">Squirtle</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- CENTRAL MAIN AREA -->
+    <div class="p-container">
+       <div class="p-cards-carousel" style="transform: translateZ(-40vw) rotateY(0deg);">
+        <a href="/pages/bulbassauro/bulbassauro1.html" class="p-card" id="pokemon-01">
+            <img class="p-card__background" src="/assets/imgs/pic.pk-bg-01.jpg" alt="background">
+            <img class="p-card__image" src="/assets/imgs/bulbasaur-01.png" alt="Bulbasaur">
+            <h2 class="p-card__title">Bulbasaur</h2>
+        </a>
+        <a href="/pages/charmander/charmander1.html" class="p-card" id="pokemon-02">
+            <img class="p-card__background" src="/assets/imgs/pic.pk-bg-02.jpg" alt="background">
+            <img class="p-card__image" src="/assets/imgs/charmander-02.png" alt="Charmander">
+            <h2 class="p-card__title">Charmander</h2>
+        </a>
+        <a href="/pages/squirtle/squirtle1.html" class="p-card" id="pokemon-03">
+            <img class="p-card__background" src="/assets/imgs/pic-pk-bg-03.png" alt="background">
+            <img class="p-card__image" src="/assets/imgs/squirtle-03.png" alt="Squirtle">
+            <h2 class="p-card__title">Squirtle</h2>
+        </a>
+       </div>
+    </div>
+
+    <!-- LOWER BUTTONS -->
+    <div class="p-controller">
+        <div id="1" onclick="selectCarouselItem(this)" class="p-controller__button p-controller__button--active">
+            01
+        </div>
+        <div id="2" onclick="selectCarouselItem(this)" class="p-controller__button">
+            02
+        </div>
+        <div id="3" onclick="selectCarouselItem(this)" class="p-controller__button">
+            03
+        </div>
+        <div class="p-controller__line"></div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script src="../../assets/scripts/loading-page.js" ></script>
+    <script src="/assets/scripts/card-animation.js"></script>
+</body>
+</html>
